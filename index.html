@@ -332,6 +332,46 @@ a{color:inherit;text-decoration:none}
 }
 .visor-sticky img.ativa{opacity:1;transform:scale(1)}
 
+/* ==================== TRABALHE CONOSCO (27/10/2026) ====================
+   Seção (não só botão) que leva às vagas em /vagas. Mesmo tom do site:
+   creme, verde, Fraunces em itálico. */
+.trabalhe{background:var(--creme-2);padding:clamp(6rem,14vh,10rem) 0;position:relative;overflow:hidden}
+.trabalhe-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);position:relative;z-index:1}
+.trabalhe-topo{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.trabalhe-txt h2{font-weight:200;font-size:clamp(2.4rem,5.6vw,4.8rem);line-height:1.05}
+.trabalhe-txt h2 em{font-family:var(--f-serif);font-style:italic;font-weight:400;color:var(--verde)}
+.trabalhe-txt h2 .palavra{display:inline-block;white-space:pre}
+.trabalhe-txt p{
+  margin-top:1.6rem;font-family:var(--f-soft);font-size:clamp(1rem,1.4vw,1.15rem);
+  line-height:1.75;color:var(--tinta-suave);max-width:46ch;
+}
+.trabalhe-btn{
+  display:inline-flex;align-items:center;gap:.8rem;margin-top:2.4rem;
+  background:var(--verde);color:var(--creme);
+  font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+  padding:1.2rem 2.4rem;border-radius:999px;
+  transition:transform .4s var(--ease),background .4s;
+}
+.trabalhe-btn:hover{transform:scale(1.05);background:var(--tinta)}
+.trabalhe-btn span{transition:transform .4s var(--ease)}
+.trabalhe-btn:hover span{transform:translateX(4px)}
+.trabalhe-foto{overflow:hidden;border-radius:var(--arco)}
+.trabalhe-foto img{width:100%;height:clamp(340px,62vh,600px);object-fit:cover;object-position:50% 40%;will-change:transform;transform:scale(1.1)}
+.trabalhe-cards{
+  margin-top:clamp(3.5rem,9vh,6rem);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:rgba(42,39,34,.14);border-radius:24px;overflow:hidden;
+}
+.trabalhe-card{background:var(--creme-2);padding:clamp(1.8rem,3vw,2.8rem);transition:background .5s var(--ease)}
+.trabalhe-card:hover{background:var(--creme)}
+.trabalhe-card .t-num{font-weight:100;font-size:2.6rem;line-height:1;color:transparent;-webkit-text-stroke:1px var(--verde)}
+.trabalhe-card h3{margin-top:1rem;font-family:var(--f-soft);font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--verde)}
+.trabalhe-card p{margin-top:.8rem;font-weight:300;font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.35}
+.trabalhe-card p b{font-weight:700}
+.trabalhe-card ul{list-style:none;margin-top:.8rem}
+.trabalhe-card li{font-weight:300;font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.7}
+.trabalhe-card li em{font-family:var(--f-serif);font-style:italic;color:var(--verde)}
+
 /* ==================== CTA FINAL ==================== */
 .cta-final{
   background:var(--verde-fundo);color:var(--creme);text-align:center;
@@ -442,6 +482,11 @@ footer{background:var(--creme);padding:0 0 2rem;position:relative;overflow:hidde
   .unidade{padding:1.5rem 0}
   .unidade:hover,.unidade.ativa{padding-left:0} /* sem deslocamento no toque */
   .unidade-img-mobile{display:block;width:100%;height:230px;object-fit:cover;border-radius:16px;margin-top:1rem}
+  .trabalhe-topo{grid-template-columns:1fr;gap:2.4rem}
+  .trabalhe-foto{order:-1;border-radius:24px}
+  .trabalhe-foto img{height:clamp(240px,42vh,380px);transform:none}
+  .trabalhe-btn{width:100%;max-width:340px;justify-content:center}
+  .trabalhe-cards{grid-template-columns:1fr}
   .cta-final{padding-left:1.2rem;padding-right:1.2rem}
   .cta-final h2{font-size:clamp(2.6rem,12.5vw,4.6rem)}
   .cta-final .cta-btn{width:100%;max-width:340px;padding:1.2rem 1rem}
@@ -462,6 +507,7 @@ footer{background:var(--creme);padding:0 0 2rem;position:relative;overflow:hidde
 @media (prefers-reduced-motion:reduce){
   .painel[data-i="2"],.painel[data-i="3"]{clip-path:none}
   .mani-img img{transform:none}
+  .trabalhe-foto img{transform:none}
   .hero-scroll::after{animation:none}
 }
 </style>
@@ -482,6 +528,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#manifesto">O Manifesto</a>
     <a href="#rituais">Os Rituais</a>
     <a href="#unidades">Unidades</a>
+    <a href="#trabalhe">Trabalhe conosco</a>
   </div>
   <a class="nav-cta" href="https://biaresponde.com.br/ir/site" target="_blank" rel="noopener">Reserve seu momento</a>
   <button class="nav-burger" id="burger" aria-label="Abrir menu"><span></span><span></span></button>
@@ -491,6 +538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#manifesto">O <em>Manifesto</em></a>
   <a href="#rituais">Os <em>Rituais</em></a>
   <a href="#unidades">As <em>Unidades</em></a>
+  <a href="#trabalhe">Trabalhe <em>conosco</em></a>
   <a class="mm-cta" href="https://biaresponde.com.br/ir/site" target="_blank" rel="noopener">Reserve seu momento</a>
 </div>
 
@@ -665,6 +713,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- ==================== TRABALHE CONOSCO ==================== -->
+<section class="trabalhe" id="trabalhe">
+  <div class="ghost" style="top:6%" aria-hidden="true"><span data-veloc="-10">JUNTOS</span></div>
+  <div class="trabalhe-inner">
+    <div class="trabalhe-topo">
+      <div class="trabalhe-txt">
+        <span class="kicker" style="color:var(--verde)">Trabalhe conosco</span>
+        <h2 class="split">Faça parte do <em>nosso time</em>.</h2>
+        <p>Mais do que corte e barba: estamos quebrando o paradigma de que o homem não se cuida. Procuramos gente que gosta de gente e quer crescer com a gente.</p>
+        <a class="trabalhe-btn" href="/vagas">Ver vagas abertas <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="trabalhe-foto">
+        <img src="https://novva-barbearia.vercel.app/api/carreiras/img/nd-1IjQGAXTCrRdAQuGIKqTD7rQOxryLzmrX.jpg"
+          onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='https://lh3.googleusercontent.com/d/1IjQGAXTCrRdAQuGIKqTD7rQOxryLzmrX=w1400'}"
+          alt="Time Novva reunido no Novva Day" loading="lazy" referrerpolicy="no-referrer">
+      </div>
+    </div>
+
+    <div class="trabalhe-cards">
+      <div class="trabalhe-card">
+        <span class="t-num">01</span>
+        <h3>Missão</h3>
+        <p>Quebrar o paradigma de que o homem não se cuida.</p>
+      </div>
+      <div class="trabalhe-card">
+        <span class="t-num">02</span>
+        <h3>Visão 2030</h3>
+        <p>Ser <b>100 pessoas</b> na Novva, atendendo <b>5.000 clientes</b> por mês.</p>
+      </div>
+      <div class="trabalhe-card">
+        <span class="t-num">03</span>
+        <h3>Valores</h3>
+        <ul>
+          <li>Clareza <em>Total</em></li>
+          <li>Alta <em>Performance</em></li>
+          <li>Evolução <em>Constante</em></li>
+          <li>Conexões <em>Humanas</em></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== CTA FINAL ==================== -->
 <section class="cta-final">
   <div class="ghost" style="top:8%;-webkit-text-stroke-color:rgba(245,235,219,.12)" aria-hidden="true"><span data-veloc="12">AGORA</span></div>
@@ -700,6 +791,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="#manifesto">O Manifesto</a></li>
         <li><a href="#rituais">Os Rituais</a></li>
         <li><a href="#unidades">Unidades</a></li>
+        <li><a href="/vagas">Trabalhe conosco</a></li>
       </ul>
     </div>
     <div>
@@ -797,6 +889,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         if (typeof fbq === "function") fbq("track", "Lead");
       } catch(e){}
+    });
+  });
+  /* Trabalhe conosco: evento próprio (não é lead de cliente) */
+  document.querySelectorAll('a[href="/vagas"]').forEach(function(a){
+    a.addEventListener("click", function(){
+      try { if (typeof gtag === "function") gtag("event", "clique_vagas", {event_category:"carreiras"}); } catch(e){}
     });
   });
 
@@ -963,6 +1061,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         onEnter:function(){ ativaUnidade(i); },
         onEnterBack:function(){ ativaUnidade(i); }
       });
+    });
+
+    /* TRABALHE CONOSCO: texto sobe, foto abre e flutua, cards entram em sequência */
+    gsap.from(".trabalhe-txt p, .trabalhe-btn", {
+      autoAlpha:0, y:24, stagger:.12, duration:.9, ease:"power3.out",
+      scrollTrigger:{trigger:".trabalhe-topo", start:"top 75%"}
+    });
+    gsap.from(".trabalhe-foto", {
+      clipPath:"inset(14% 8% 14% 8% round 24px)", duration:1.3, ease:"power3.out",
+      scrollTrigger:{trigger:".trabalhe-foto", start:"top 80%"}
+    });
+    if (!mobile) {
+      gsap.fromTo(".trabalhe-foto img", {yPercent:-6, scale:1.14}, {yPercent:6, scale:1.04, ease:"none",
+        scrollTrigger:{trigger:".trabalhe-foto", start:"top bottom", end:"bottom top", scrub:true}});
+    }
+    gsap.from(".trabalhe-card", {
+      autoAlpha:0, y:34, stagger:.12, duration:.9, ease:"power3.out",
+      scrollTrigger:{trigger:".trabalhe-cards", start:"top 82%"}
     });
 
     /* PARALLAX GERAL ------------------------------------------ */
